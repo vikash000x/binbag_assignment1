@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:'https://binbag-assignment1.vercel.app/',
+    origin:'https://binbag-assignment1.vercel.app',
     credentials:true
 }
 
