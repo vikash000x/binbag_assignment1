@@ -80,7 +80,7 @@ export const login = async (req, res) => {
 
         
         res.cookie("debug", "test_value", { maxAge: 60 * 1000, httpOnly: false, sameSite: "strict" }); // Test cookie
-        res.cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: false, sameSite: 'strict',   domain: "localhost" });
+        res.cookie("token", token, { maxAge: 1 * 24 * 60 * 60 * 1000, httpOnly: false, sameSite: 'strict'});
 
         return res.status(200).json({
             message: `Welcome back ${user.fullname}`,
