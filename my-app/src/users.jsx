@@ -32,7 +32,11 @@ export default function UserPage() {
 
 //   console.log("Users:", users);
 
-  const debounceSearch = useCallback((query) => {
+const debounceSearch = useCallback((query) => {
+    if (query.trim() === "") {
+      setFilteredUsers(users); // Show all users when search is empty
+      return;
+    }
     if (cache[query]) {
       setFilteredUsers(cache[query]);
     } else {
@@ -43,6 +47,7 @@ export default function UserPage() {
       setFilteredUsers(filtered);
     }
   }, [users, cache]);
+  
 
   useEffect(() => {
     const timer = setTimeout(() => debounceSearch(searchTerm), 300);

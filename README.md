@@ -13,8 +13,8 @@ frontend feature=>
  =>build pagination
 
 hosted => 
-backend=> netlify
-frontend=> vercel
+
+frontend, backend => render
 
 
 env file ======>
@@ -23,8 +23,8 @@ SECRET_KEY =
 PORT = 5000
 
 setup instruction =>
-backend => npm install, npm start
-frontend => npm install, npm  run dev
+backend => npm install, npm run dev
+
 
 
   
