@@ -10,7 +10,7 @@ export default function UserPage() {
   const usersPerPage = 5;
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/user/getAll")
+    fetch("https://binbag-assignment1.onrender.com/api/user/getAll")
       .then((response) => response.json())
       .then((data) => {
         console.log("API Response:", data);

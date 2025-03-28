@@ -17,7 +17,7 @@ export default function Navbar() {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/user/logout", {
+      const response = await fetch("https://binbag-assignment1.onrender.com/api/user/logout", {
         method: "GET",
         credentials: "include",
       });

@@ -14,7 +14,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/user/profile", {
+        const response = await fetch("https://binbag-assignment1.onrender.com/api/user/profile", {
           method: "GET",
           credentials: "include",
         });
@@ -62,7 +62,7 @@ const ProfilePage = () => {
     
 
     try {
-      const response = await fetch("http://localhost:5000/api/user/profile/update", {
+      const response = await fetch("https://binbag-assignment1.onrender.com/api/user/profile/update", {
         method: "POST",
         credentials: "include",
         headers: {

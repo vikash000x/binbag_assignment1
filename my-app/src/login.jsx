@@ -21,7 +21,7 @@ export default function AuthPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isLogin ? "http://localhost:5000/api/user/login" : "http://localhost:5000/api/user/register";
+    const url = isLogin ? "https://binbag-assignment1.onrender.com/api/user/login" : "https://binbag-assignment1.onrender.com/api/user/register";
     
     try {
       const response = await fetch(url, {
