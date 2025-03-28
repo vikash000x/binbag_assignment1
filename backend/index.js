@@ -33,9 +33,9 @@ const PORT = process.env.PORT || 3000;
 // api's
 app.use("/api/user", userRoute);
 
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
+app.use(express.static(path.join(_dirname, "/my-app/dist")));
 app.get('*', (_ , res) => {
-    res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
+    res.sendFile(path.resolve(_dirname, "my-app", "dist", "index.html"));
 })
 
 app.listen(PORT,()=>{
