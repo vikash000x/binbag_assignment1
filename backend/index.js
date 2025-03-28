@@ -4,12 +4,12 @@ import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.route.js";
 import cors from 'cors';
-// import path from 'path'
+ import path from 'path'
 dotenv.config({});
 
 const app = express();
 
-// const _dirname = path.resolve();
+ const _dirname = path.resolve();
 // middleware
 
 
@@ -33,10 +33,10 @@ const PORT = process.env.PORT || 3000;
 // api's
 app.use("/api/user", userRoute);
 
-// app.use(express.static(path.join(_dirname, "/frontend/dist")));
-// app.get('*', (_ , res) => {
-//     res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
-// })
+app.use(express.static(path.join(_dirname, "/frontend/dist")));
+app.get('*', (_ , res) => {
+    res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
+})
 
 app.listen(PORT,()=>{
     connectDB();
